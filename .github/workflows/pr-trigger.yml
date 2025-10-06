@@ -1,0 +1,13 @@
+name: PR Trigger Example
+on:
+  pull_request:           # Trigger on PR events
+    types: [opened, synchronize, reopened]  # Specific PR activities
+    branches:             # Target branches for PR
+      - main             # Only PRs targeting main branch
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run tests
+        run: echo "Testing PR"
