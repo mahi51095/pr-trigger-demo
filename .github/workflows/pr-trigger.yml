@@ -4,9 +4,6 @@ on:
     types: [opened, synchronize, reopened]  # Specific PR activities
     branches:             # Target branches for PR
       - main             # Only PRs targeting main branch
-    paths:               # File paths that trigger workflow
-      - '**.js'          # Any JavaScript file changes
-      - '**.ts'          # Any TypeScript file changes
 
 jobs:
   test:
